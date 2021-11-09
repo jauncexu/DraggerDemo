@@ -1,0 +1,20 @@
+ Dagger2
+
+ MyApplication中实现全局注册
+ mStudentComponent = DaggerStudentComponent.builder().studentModule(new StudentModule()).build();
+
+ 然后在对应的Activity  依赖注册
+  ((MyApplication) getApplication()).getAppComponent().injectMainActivity2(this);
+
+
+
+手写导入dagger库 的代码
+implementation 'com.google.dagger:dagger:2.4'
+
+
+创建  apt文件夹下的 Dog以及Comonent以及module,build生成文件  观察源码
+H:\android_project\DraggerDemo\app\build\generated\ap_generated_sources
+
+
+':custom_dagger2',  自定义的 dagger注解类
+':use_custom_dagger2' 自定义dagger的使用类，模仿dagger自动生成的build下的类

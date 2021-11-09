@@ -2,8 +2,10 @@ package com.example.draggerdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -33,5 +35,9 @@ public class MainActivity extends AppCompatActivity {
         // module加入Singleton时 则表示局部单例
         Log.w("xjw", student.hashCode() + "__MainActivity");
         Log.w("xjw", student.hashCode() + "__MainActivity");
+    }
+
+    public void start(View view) {
+        startActivity(new Intent(this, MainActivity2.class));
     }
 }
